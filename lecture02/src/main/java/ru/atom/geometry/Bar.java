@@ -19,7 +19,7 @@ public class Bar implements  Collider {
             this.point1.setX(this.point2.getX());
             this.point2.setX(tmp);
         }
-        if(this.point1.getY() > this.point2.getY()) {
+        if (this.point1.getY() > this.point2.getY()) {
             int tmp = this.point1.getY();
             this.point1.setY(this.point2.getY());
             this.point2.setY(tmp);
