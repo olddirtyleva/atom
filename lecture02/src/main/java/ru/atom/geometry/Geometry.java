@@ -25,10 +25,7 @@ public final class Geometry {
     public static Collider createBar(int firstCornerX, int firstCornerY, int secondCornerX, int secondCornerY) {
        Point point1 = new Point(firstCornerX, firstCornerY);
        Point point2 = new Point(secondCornerX, secondCornerY);
-        Collider bar = new Bar(point1, point2);
-
-        return bar;
-
+       return new Bar(point1, point2);
     }
 
     /**
@@ -36,8 +33,6 @@ public final class Geometry {
      * @return new Point
      */
     public static Collider createPoint(int x, int y) {
-        //throw new UnsupportedOperationException();
-      Collider point = new Point(x, y);
-      return point;
+        return new Point(x, y);
     }
 }

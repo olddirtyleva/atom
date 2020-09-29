@@ -1,17 +1,15 @@
 package ru.atom.geometry;
 
 public class Bar implements  Collider{
-    private Point point1;
-    private Point point2;
+    private final Point point1;
+    private final Point point2;
 
     private boolean CheckPoint(Point p, Bar b)
     {
-        if(p.getX() >= b.point1.getX() &&
+        return p.getX() >= b.point1.getX() &&
                 p.getY() >= b.point1.getY() &&
-                p.getX()<= b.point2.getX() &&
-                p.getY()<= b.point2.getY())
-            return true;
-        else return  false;
+                p.getX() <= b.point2.getX() &&
+                p.getY() <= b.point2.getY();
     }
 
     public Bar(Point point1, Point point2){
@@ -47,17 +45,15 @@ public class Bar implements  Collider{
                     CheckPoint(new Point(otherBar.point2.getX(),otherBar.point1.getY()),this) ||
                     CheckPoint(new Point(otherBar.point1.getX(),otherBar.point2.getY()),this))
                 return true;
-            else if(otherBar.point2.getX() <=this.point2.getX() && otherBar.point1.getX() >= this.point1.getX()
+            else return otherBar.point2.getX() <= this.point2.getX() && otherBar.point1.getX() >= this.point1.getX()
                     && otherBar.point2.getY() >= this.point2.getY() && otherBar.point1.getY() <= this.point1.getY() ||
-                    otherBar.point2.getY() <=this.point2.getY() && otherBar.point1.getY() >= this.point1.getY()
-                            && otherBar.point2.getX() >= this.point2.getX() && otherBar.point1.getX() <= this.point1.getX())
-                return true;
+                    otherBar.point2.getY() <= this.point2.getY() && otherBar.point1.getY() >= this.point1.getY()
+                            && otherBar.point2.getX() >= this.point2.getX() && otherBar.point1.getX() <= this.point1.getX();
         }
         else if (o instanceof  Point)
         {
             Point otherPoint = (Point) o;
-            if(CheckPoint(otherPoint,this))
-                return true;
+            return CheckPoint(otherPoint, this);
         }
         return false;
     }

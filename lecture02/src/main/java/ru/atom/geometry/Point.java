@@ -36,10 +36,7 @@ public class Point /* super class and interfaces here if necessary */ implements
         // cast from Object to Point
         Point point = (Point) o;
 
-        if(this.x == point.x && this.y == point.y)
-            return  true;
-        else
-            return  false;
+        return this.x == point.x && this.y == point.y;
     }
 
     @Override
