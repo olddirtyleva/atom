@@ -1,0 +1,17 @@
+To see your remotes ise
+git remote -v
+
+Syncinc a fork
+
+Step 1 – Add Upstream Repository
+git remote add upstream https://github.com/Firestorm01X2/atom
+
+Step 2 – Fetch Upstream Branches
+git fetch upstream
+Changes from the upstream (forked repository) are loaded.
+
+Step 3 - Check out your fork's local master branch.
+git checkout master
+
+Step 4 - Merge the changes from upstream/master into your local master branch. This brings your fork's master branch into sync with the upstream repository, without losing your local changes.
+git merge upstream/master
