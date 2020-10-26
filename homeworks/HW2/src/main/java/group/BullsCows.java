@@ -38,8 +38,7 @@ public class BullsCows {
                 if (isWinning) {
                     log.info("Player win!");
                     System.out.println("You win!");
-                }
-                else {
+                } else {
                     log.info("Player lose!");
                     System.out.println("You lose!");
                 }
@@ -61,7 +60,7 @@ public class BullsCows {
         log.info("-------------------------------------------------------");
         log.info("");
         log.info(moveNumber + " turn");
-        log.info("Players word: "+ playerWord);
+        log.info("Players word: " + playerWord);
         StringBuilder playerTmp = new StringBuilder();
         StringBuilder hiddenTmp = new StringBuilder();
         if (playerWord.equals(hiddenWord)) {
@@ -111,24 +110,8 @@ public class BullsCows {
             log.info("hidden word: " + hiddenWord);
             return hiddenWord;
         } catch (IOException e) {
-            // log error
             System.out.println(e.getMessage());
         }
         return null;
     }
-
-    /*public static void getHiddenWords() {
-        try {
-            BufferedReader reader = new BufferedReader(new InputStreamReader(
-                    new FileInputStream("dictionary.txt"),
-                    StandardCharsets.UTF_8));
-            String line;
-            while ((line = reader.readLine()) != null) {
-                hiddenWords.add(line);
-            }
-        } catch (IOException e) {
-            // log error
-            System.out.println(e.getMessage());
-        }
-    }*/
 }
