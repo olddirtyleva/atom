@@ -1,1 +1,6 @@
-2020-10-12 09:15:07.388 INFO [main] [Group1.BullsCows] [main] [Group1.BullsCows.main(BullsCows.java:9)] - Логгер работает!
+2020-10-26 10:50:04.266 INFO [main] [group.BullsCows] [pickHiddenWord] [group.BullsCows.pickHiddenWord(BullsCows.java:105)] - Get words list
+2020-10-26 10:50:04.276 INFO [main] [group.BullsCows] [pickHiddenWord] [group.BullsCows.pickHiddenWord(BullsCows.java:108)] - hidden word: daubs
+2020-10-26 10:50:13.854 INFO [main] [group.BullsCows] [checkWord] [group.BullsCows.checkWord(BullsCows.java:60)] - 0 turn
+2020-10-26 10:50:13.854 INFO [main] [group.BullsCows] [checkWord] [group.BullsCows.checkWord(BullsCows.java:61)] - Players word: hasar
+2020-10-26 10:50:13.855 INFO [main] [group.BullsCows] [checkWord] [group.BullsCows.checkWord(BullsCows.java:85)] - bulls: 1
+2020-10-26 10:50:13.855 INFO [main] [group.BullsCows] [checkWord] [group.BullsCows.checkWord(BullsCows.java:86)] - cows: 0

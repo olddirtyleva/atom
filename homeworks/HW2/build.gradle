@@ -3,7 +3,7 @@ plugins {
     id 'checkstyle'
 }
 
-group 'Group1'
+group 'group'
 version '1.0'
 
 sourceCompatibility = 1.8
